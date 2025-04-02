@@ -51,21 +51,29 @@ namespace Clase2._1
             switch (resp)
             {
                 case "1":
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.WriteLine("Agregando Ebook");
+                    Console.ResetColor();
                     mt.agregarEbook();                    
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Creado con exito!");
                     Console.ResetColor();
                     break; 
-                case "2": Console.WriteLine("Agregando Libro Fisico ");
+                case "2":
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("Agregando Libro Fisico ");
+                    Console.ResetColor();
                     mt.agregarLibroFisico();                   
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Creado con exito!");
                     Console.ResetColor();
                     break;
-                case "3": Console.WriteLine("Agregando Revista");
+                case "3":
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("Agregando Revista");
+                    Console.ResetColor();
                     mt.agregarRevista();                    
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;

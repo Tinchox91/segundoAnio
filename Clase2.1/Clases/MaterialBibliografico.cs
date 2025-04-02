@@ -39,81 +39,52 @@ namespace Clases
         {
             bool salir = false;
             //agregar un metodo "agregar hojas" para el contro de errores y pasar el try catch ahi
-            try
-            {
-                Ebook ebook = new Ebook();
-                Console.Write("Ingrese el Titulo: ");
-                ebook.titulo = Console.ReadLine();
-                Console.Write("Ingrese el Autor: ");
-                ebook.autor = Console.ReadLine();
-                Console.Write("Ingrese el Año: ");
-                ebook.año = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Ingrese Cantidad de hojas: ");
-                ebook.cantidadHojas = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Ingrese el Peso en MB: ");
-                ebook.pesoMB = Convert.ToDouble(Console.ReadLine());
-                ebooks.Add(ebook);
 
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ResetColor();
-                Console.ReadKey();
-                
-            }
-      
-        }               
+            Ebook ebook = new Ebook();
+            Console.Write("Ingrese el Titulo: ");
+            ebook.titulo = Console.ReadLine();
+            Console.Write("Ingrese el Autor: ");
+            ebook.autor = Console.ReadLine();
+            Console.Write("Ingrese el Año: ");
+            ebook.año = cargarCantidad();
+            Console.Write("Ingrese Cantidad de hojas: ");
+           ebook.cantidadHojas= cargarCantidad();
+            Console.Write("Ingrese el Peso en MB: ");
+            ebook.pesoMB = cargarCantidad();
+            ebooks.Add(ebook);
+
+
+
+        }
         public void agregarLibroFisico()
         {
-          
-            try
-            {
+           
                 LibroFisico libroFisico = new LibroFisico();
                 Console.Write("Ingrese el Titulo: ");
                 libroFisico.titulo = Console.ReadLine();
                 Console.Write("Ingrese el Autor: ");
                 libroFisico.autor = Console.ReadLine();
                 Console.Write("Ingrese el Año: ");
-                libroFisico.año = Convert.ToInt32(Console.ReadLine());
+                libroFisico.año = cargarCantidad();
                 Console.Write("Ingrese Cantidad de hojas: ");
-                libroFisico.agregarHojas(Convert.ToInt32(Console.ReadLine()));
-                librosFisicos.Add(libroFisico);
-            }
-            catch (Exception e)
-            {
+                libroFisico.agregarHojas(cargarCantidad());
+                librosFisicos.Add(libroFisico);           
 
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ResetColor();
-                Console.ReadKey();
-                
-            }
         }
         public void agregarRevista()
         {
-            try
-            {
+           
                 Revista revista = new Revista();
                 Console.Write("Ingrese el Titulo: ");
                 revista.titulo = Console.ReadLine();
                 Console.Write("Ingrese el Autor: ");
                 revista.autor = Console.ReadLine();
                 Console.Write("Ingrese el Año: ");
-                revista.año = Convert.ToInt32(Console.ReadLine());
+                revista.año = cargarCantidad();
                 Console.Write("Ingrese el Volumen: ");
-                revista.volumen = Convert.ToInt32(Console.ReadLine());
-                revistas.Add(revista);
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ResetColor();
-                Console.ReadKey();
-            }
-            
+                revista.volumen = cargarCantidad();
+                revistas.Add(revista);          
+                          
         }
         public void mostrarEbooks()
         {
@@ -134,7 +105,7 @@ namespace Clases
                 Console.WriteLine("No hay Ebooks");
                 Console.ResetColor();
             }
-         
+
         }
         public void mostrarLibrosFisicos()
         {
@@ -178,18 +149,33 @@ namespace Clases
             }
 
         }
-        //private double cargarHojas(string temp)
-        //{
-        //    try
-        //    {
+        private int cargarCantidad()
+        {
+            bool salir = false;
+            
+            do
+            {
+                salir = false;
+                string temp = Console.ReadLine();
+                try
+                {
+                    return Convert.ToInt16(temp);
+                }
+                catch (Exception e)
+                {
 
-        //    }
-        //    catch (Exception)
-        //    {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(e.Message);
+                    Console.ResetColor();
+                    Console.ReadKey();
+                    salir = true;
+                    continue;
+                }
+            } while (salir);
+            return 0;
 
-        //        throw;
-        //    }
-        //}
-     
+        }
+       
+
     }
 }
