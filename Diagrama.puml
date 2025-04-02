@@ -1,0 +1,6 @@
+@startuml
+class Persona {
+    +string Nombre
+    +void Saludar()
+}
+@enduml

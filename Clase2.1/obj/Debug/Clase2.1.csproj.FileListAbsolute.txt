@@ -1,0 +1,7 @@
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\bin\Debug\Clase2.1.exe.config
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\bin\Debug\Clase2.1.exe
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\bin\Debug\Clase2.1.pdb
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\obj\Debug\Clase2.1.csproj.AssemblyReference.cache
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\obj\Debug\Clase2.1.csproj.CoreCompileInputs.cache
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\obj\Debug\Clase2.1.exe
+C:\Users\tinch\OneDrive\Documentos\IDRA\2do Año\Programacion 2\Clase2.1\Clase2.1\obj\Debug\Clase2.1.pdb
